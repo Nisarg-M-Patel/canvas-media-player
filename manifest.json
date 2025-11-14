@@ -1,0 +1,15 @@
+{
+  "manifest_version": 2,
+  "name": "Canvas Video Enhancer",
+  "version": "1.0",
+  "description": "Better video player for Canvas",
+  
+  "permissions": ["storage"],
+  
+  "content_scripts": [{
+    "matches": ["*://*.instructure.com/*"],
+    "js": ["libs/video.min.js", "content.js"],
+    "css": ["libs/video-js.min.css", "player.css"],
+    "run_at": "document_end"
+  }]
+}
